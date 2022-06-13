@@ -10,3 +10,6 @@ const Color kBorderColor = Color(0XFFFFFFFF);
 const Color kSubTitleTextColor = Color(0XFFA39DAB);
 const Color kTitleTextColor = Color(0XFFFFFFFF);
 const Color kcardTextColor = Color(0XFF2A2A2A);
+const Color kButonTextColor = Color(0XFF2A2A2A);
+const Color kButtonColor = Color(0XFFF2F2F2);
+const Color kProgressColor = Color(0XFFE7F6FD);

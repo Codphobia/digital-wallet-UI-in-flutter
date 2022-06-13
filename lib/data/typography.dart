@@ -24,6 +24,14 @@ TextStyle kSubTitleTextStyle = TextStyle(
     fontSize: ScreenUtil().setSp(10.sp),
     color: kSubTitleTextColor,
     fontWeight: KNormalFont);
+TextStyle kButtonTextStyle = TextStyle(
+    fontSize: ScreenUtil().setSp(14.sp),
+    color: kButonTextColor,
+    fontWeight: KBoldFont);
+TextStyle kButton2TextStyle = TextStyle(
+    fontSize: ScreenUtil().setSp(14.sp),
+    color: kTitleTextColor,
+    fontWeight: KBoldFont);
 
 FontWeight KBoldFont = FontWeight.bold;
 FontWeight KNormalFont = FontWeight.normal;

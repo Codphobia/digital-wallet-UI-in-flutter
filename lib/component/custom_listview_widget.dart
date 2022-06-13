@@ -1,138 +1,30 @@
 import 'package:digital_wallet/data/colors.dart';
 import 'package:digital_wallet/data/typography.dart';
+import 'package:digital_wallet/model/listview.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyListViewWidget extends StatelessWidget {
-  const MyListViewWidget({
-    Key? key,
-  }) : super(key: key);
+  MyListView myListView;
+  MyListViewWidget({Key? key, required this.myListView}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: ListView(
-      physics: const BouncingScrollPhysics(),
-      children: [
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.spotify,
-              color: kIconColor,
-            ),
-            title: Text(
-              'Spotify',
-              style: kTitleTextStyle,
-            ),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$15.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.bowlFood,
-              color: kIconColor,
-            ),
-            title: Text('Grocery', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$150.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.seedling,
-              color: kIconColor,
-            ),
-            title: Text('seedling', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$15.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.egg,
-              color: kIconColor,
-            ),
-            title: Text('Egg', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 10 ,3:30 Am',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$20.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.spotify,
-              color: kIconColor,
-            ),
-            title: Text(
-              'Spotify',
-              style: kTitleTextStyle,
-            ),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$15.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.bowlFood,
-              color: kIconColor,
-            ),
-            title: Text('Grocery', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$150.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.seedling,
-              color: kIconColor,
-            ),
-            title: Text('seedling', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 20 ,3:41 pm',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$15.00',
-              style: kTitleTextStyle,
-            )),
-        ListTile(
-            leading: const Icon(
-              FontAwesomeIcons.egg,
-              color: kIconColor,
-            ),
-            title: Text('Egg', style: kTitleTextStyle),
-            subtitle: Text(
-              'May 10 ,3:30 Am',
-              style: kSubTitleTextStyle,
-            ),
-            trailing: Text(
-              '-\$20.00',
-              style: kTitleTextStyle,
-            )),
-      ],
-    ));
+    return ListTile(
+        leading: Icon(
+          myListView.iconData,
+          color: kIconColor,
+        ),
+        title: Text(
+          myListView.title,
+          style: kTitleTextStyle,
+        ),
+        subtitle: Text(
+          myListView.subTitle,
+          style: kSubTitleTextStyle,
+        ),
+        trailing: Text(
+          myListView.traling,
+          style: kTitleTextStyle,
+        ));
   }
 }

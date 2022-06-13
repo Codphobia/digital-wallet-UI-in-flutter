@@ -1,11 +1,14 @@
 import 'package:digital_wallet/data/colors.dart';
 import 'package:digital_wallet/data/typography.dart';
+import 'package:digital_wallet/model/carddata.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyCard extends StatefulWidget {
+  MyCards myCards;
   int index;
-  MyCard({Key? key, required this.index}) : super(key: key);
+  MyCard({Key? key, required this.index, required this.myCards})
+      : super(key: key);
 
   @override
   State<MyCard> createState() => _MyCardState();
@@ -41,19 +44,19 @@ class _MyCardState extends State<MyCard> {
               activeColor: odd % 2 == 0 ? kFirstCardColor : kSecondCardColor,
             ),
             Text(
-              'CARD NUMBER',
+              widget.myCards.title,
               style: kcardTextStyle,
             ),
             SizedBox(
               height: 5.h,
             ),
             Text(
-              '3829  4820',
+              widget.myCards.number,
               style: kcardTextStyle,
             ),
             const Spacer(),
             Text(
-              'Ghulam',
+              widget.myCards.name,
               style: kcardTextStyle,
             ),
             SizedBox(
